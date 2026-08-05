@@ -1,4 +1,4 @@
 # Loja
 Criando e evoluindo
 A ideia é ir criando e estudando!
-Conforme for aprendendo vou evoluindo.
+Conforme for aprendendo vou evoluindo o programa.

@@ -4,14 +4,22 @@ import java.util.Scanner;
 
 public class cadastro {
 		public static void main(String[]args) {
-			System.out.println("Bem Vindo!");
 			
-			 Scanner entrada = new Scanner(System.in);
-			 	
-			 int nomeCliente;
-			 
-			 System.out.println("Qual o seu nome?");
-			 nomeCliente = entrada.nextInt();
-			 
+	        Scanner entrada = new Scanner(System.in);
+
+	        System.out.println("Qual o seu nome?");
+	        String nome = entrada.nextLine();
+	        
+	        System.out.println("Qual a sua idade?");
+	        int idade = entrada.nextInt();
+	        
+	        System.out.println("Em que ano você nasceu?");
+	        int ano = entrada.nextInt();
+	        
+	        if (ano >= 2009) {
+	            System.out.println("Não pode fazer Cadastro!");
+	        } else {
+	            System.out.println("Pode fazer o cadastro!");
+	        }
 		}
 }
