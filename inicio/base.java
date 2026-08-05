@@ -17,9 +17,9 @@ public class cadastro {
 	        int ano = entrada.nextInt();
 	        
 	        if (ano >= 2009) {
-	            System.out.println("Não pode fazer Cadastro!");
+	            System.out.println(nome + " Não pode fazer Cadastro!");
 	        } else {
-	            System.out.println("Pode fazer o cadastro!");
+	            System.out.println(nome + " Pode fazer o cadastro!");
 	        }
 		}
 }
