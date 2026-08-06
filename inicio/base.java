@@ -6,20 +6,33 @@ public class cadastro {
 		public static void main(String[]args) {
 			
 	        Scanner entrada = new Scanner(System.in);
-
-	        System.out.println("Qual o seu nome?");
-	        String nome = entrada.nextLine();
+	        String Continuar  = "s";
 	        
-	        System.out.println("Qual a sua idade?");
-	        int idade = entrada.nextInt();
-	        
-	        System.out.println("Em que ano você nasceu?");
-	        int ano = entrada.nextInt();
-	        
-	        if (ano >= 2009) {
-	            System.out.println(nome + " Não pode fazer Cadastro!");
-	        } else {
-	            System.out.println(nome + " Pode fazer o cadastro!");
+	        while (Continuar.equalsIgnoreCase("s")) {
+	        	
+	        	System.out.println("Qual o seu nome?");
+	        		String nome = entrada.nextLine();
+	        		
+	        	System.out.println("Quantos anos você tem?");
+	        		int idade = entrada.nextInt();
+	        	
+	        	System.out.println("Ano de nascimento?");
+	        		int ano = entrada.nextInt();
+	        		
+	        			entrada.nextLine();
+	        			
+	        			
+	        	if (idade >= 18) {
+	        		System.out.println("Cliente Cadastrado!");
+	        	}else {
+	        		System.out.println("Cliente não cadastrado!");
+	        	}
+	        	
+	        			System.out.println("Deseja cadastrar outro cliente? (S/N)");
+	        				Continuar = entrada.nextLine();
+	        				
 	        }
-		}
+	        		System.out.println("Cadastro Encerrado!");
+	        		entrada.close();
+	       }
 }
