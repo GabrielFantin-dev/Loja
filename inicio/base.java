@@ -2,37 +2,35 @@ package cadastro;
 
 import java.util.Scanner;
 
-public class cadastro {
-		public static void main(String[]args) {
-			
-	        Scanner entrada = new Scanner(System.in);
-	        String Continuar  = "s";
-	        
-	        while (Continuar.equalsIgnoreCase("s")) {
-	        	
-	        	System.out.println("Qual o seu nome?");
-	        		String nome = entrada.nextLine();
-	        		
-	        	System.out.println("Quantos anos você tem?");
-	        		int idade = entrada.nextInt();
-	        	
-	        	System.out.println("Ano de nascimento?");
-	        		int ano = entrada.nextInt();
-	        		
-	        			entrada.nextLine();
-	        			
-	        			
-	        	if (idade >= 18) {
-	        		System.out.println("Cliente Cadastrado!");
-	        	}else {
-	        		System.out.println("Cliente não cadastrado!");
-	        	}
-	        	
-	        			System.out.println("Deseja cadastrar outro cliente? (S/N)");
-	        				Continuar = entrada.nextLine();
-	        				
-	        }
-	        		System.out.println("Cadastro Encerrado!");
-	        		entrada.close();
-	       }
+public class Cadastro {
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Quantos clientes deseja cadastrar?");
+        	int clientes = entrada.nextInt();
+
+        entrada.nextLine();
+
+        for (int i = 1; i <= clientes; i++) {
+
+            System.out.println("\n===== Cadastro do Cliente " + i + " =====");
+
+            System.out.println("Nome:");
+            String nome = entrada.nextLine();
+
+            System.out.println("Idade:");
+            int idade = entrada.nextInt();
+
+            entrada.nextLine();
+
+            if (idade >= 18) {
+                System.out.println(nome + " foi cadastrado com sucesso!");
+            } else {
+                System.out.println(nome + " não pode ser cadastrado.");
+            }
+        }
+        entrada.close();
+    }
 }
