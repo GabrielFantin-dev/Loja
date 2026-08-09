@@ -5,17 +5,32 @@ import java.util.Scanner;
 public class cadastro {
 
     // 
-    String retornaNome() {
+   public static String retornaNome(String nome) {
         
-         String nome = "Gabriel";
+  //       String nome = "Gabriel";
         return  nome;
         
     }
+   public static Boolean maiorDeDezoito(int idade,String nome) {
+	   if (idade >= 18) {
+		   return true;
+	   }else {
+		   return false;
+	   }
+   }
     
     public static void main(String[] args) {
-        return nome;
-System.out.println(nome);
 
+//     System.out.println(nome);
+    	String nomeNovo = retornaNome("Gabriel");
+    	int sobrenome = 1;
+    	System.out.println(nomeNovo);
+    	if (maiorDeDezoito(17, "Pedro")) {
+    		System.out.println("É maior de idade");
+    	}else{
+    		System.out.println("Não é maior de idade");
+    	}
+    	
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("===================================");
