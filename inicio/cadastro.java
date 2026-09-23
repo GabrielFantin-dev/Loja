@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class cadastro {
 
-    // 
+    
    public static String retornaNome(String nome) {
         
-  //       String nome = "Gabriel";
+         
         return  nome;
         
     }
